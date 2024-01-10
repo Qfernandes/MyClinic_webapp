@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MyClinic.Data;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,8 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<MyClinicContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MyClinicContext") ?? throw new InvalidOperationException("Connection string 'MyClinicContext' not found.")));
 
 var app = builder.Build();
 
