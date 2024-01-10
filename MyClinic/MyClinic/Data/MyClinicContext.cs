@@ -14,12 +14,14 @@ namespace MyClinic.Data
         {
         }
 
+        public DbSet<Patient> Patients { get; set; }
+
         public DbSet<Treatment> Treatments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-            modelBuilder.Entity<Treatment>().ToTable("Treatment");
+        modelBuilder.Entity<Patient>().ToTable("Patient");
+        modelBuilder.Entity<Treatment>().ToTable("Treatment");
         }
 
         public DbSet<MyClinic.Models.Treatment> Treatment { get; set; } = default!;
