@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-MyClinic-ed365131-eb3b-4c2c-883e-c4401bdb4648</UserSecretsId>
   </PropertyGroup>
