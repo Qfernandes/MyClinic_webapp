@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Schedule
+/*public class Schedule
 {
 	public Schedule
 	{
@@ -19,3 +19,4 @@ public class Schedule
     }
 	
 }
+*/

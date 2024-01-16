@@ -11128,19 +11128,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jozic\\.nuget\\packages\\": {}
+    "C:\\Users\\ravle\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
+      "projectUniqueName": "C:\\Users\\ravle\\OneDrive\\Desktop\\WA clinic\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
       "projectName": "MyClinic",
-      "projectPath": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
-      "packagesPath": "C:\\Users\\jozic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\obj\\",
+      "projectPath": "C:\\Users\\ravle\\OneDrive\\Desktop\\WA clinic\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
+      "packagesPath": "C:\\Users\\ravle\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ravle\\OneDrive\\Desktop\\WA clinic\\MyClinic_webapp\\MyClinic\\MyClinic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jozic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ravle\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11212,7 +11212,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

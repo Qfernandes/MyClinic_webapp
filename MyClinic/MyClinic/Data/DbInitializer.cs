@@ -27,6 +27,54 @@ namespace MyClinic.Data
 
             context.Patients.AddRange(patients);
             context.SaveChanges();
+
+            if (context.Treatments.Any())
+            {
+                return;
+            }
+
+            var Crowning = new Treatment
+            {
+                TreatmentID = 1050,
+                TreatmentName = "Crowning",
+                Price = 100
+            };
+
+            var Braces = new Treatment
+            {
+                TreatmentID = 4022,
+                TreatmentName = "Braces",
+                Price = 115
+            };
+
+            var Cleaning = new Treatment
+            {
+                TreatmentID = 4041,
+                TreatmentName = "Cleaning",
+                Price = 75
+            };
+
+            var Dental = new Treatment
+            {
+                TreatmentID = 1045,
+                TreatmentName = "Dental",
+                Price = 150
+            };
+
+            var Refill = new Treatment
+            {
+                TreatmentID = 3141,
+                TreatmentName = "Refill",
+                Price = 70
+            };
+
+
+
+
+            context.SaveChanges();
+
         }
+
+
     }
 }

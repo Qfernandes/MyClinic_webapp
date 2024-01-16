@@ -11,6 +11,7 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-MyClinic-ed365131-eb3b-4c2c-883e-c4401bdb4648")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyClinic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
