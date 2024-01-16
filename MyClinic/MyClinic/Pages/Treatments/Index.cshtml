@@ -2,41 +2,83 @@
 @model MyClinic.Pages.Treatments.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Treatments";
 }
 
-<h1>Index</h1>
+<h2>Treatments</h2>
 
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Treatment[0].TreatmentName)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Treatments[0].TreatmentName)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Treatment[0].Price)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DOBSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Treatments[0].Price)
+                </a>
             </th>
+            
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Treatment) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TreatmentName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.TreatmentID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.TreatmentID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.TreatmentID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Treatments)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TreatmentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                   
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.TreatmentID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.TreatmentID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.TreatmentID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+@{
+    var prevDisabled = !Model.Treatments.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Treatments.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Treatments.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Treatments.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>

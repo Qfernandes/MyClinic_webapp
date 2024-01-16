@@ -1,4 +1,5 @@
-﻿using MyClinic.Models;
+﻿using Microsoft.Data.SqlClient.Server;
+using MyClinic.Models;
 
 namespace MyClinic.Data
 {
@@ -68,6 +69,12 @@ namespace MyClinic.Data
                 Price = 70
             };
 
+            var Treatments = new Treatment[]
+            {
+               Crowning, Braces, Cleaning, Dental, Refill
+            };
+
+            context.AddRange(Treatments);
 
 
 

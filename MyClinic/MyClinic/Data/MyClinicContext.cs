@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MyClinic.Models;
 
+
 namespace MyClinic.Data
 {
     public class MyClinicContext : DbContext
