@@ -23,12 +23,12 @@ namespace MyClinic.Pages.Treatments
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Treatment == null)
+            if (id == null || _context.Treatments == null)
             {
                 return NotFound();
             }
 
-            var treatment = await _context.Treatment.FirstOrDefaultAsync(m => m.TreatmentID == id);
+            var treatment = await _context.Treatments.FirstOrDefaultAsync(m => m.TreatmentID == id);
             if (treatment == null)
             {
                 return NotFound();

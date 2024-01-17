@@ -58,7 +58,7 @@ namespace MyClinic.Models
 
         public ICollection<Treatmentpatient> Treatmentpatients { get; set; }
 
-        public ICollection<Schedule> Schedules { get; set; }
+       // public ICollection<Schedule> Schedules { get; set; }
         public ICollection<Payment> Payments { get; set; }
     }
 

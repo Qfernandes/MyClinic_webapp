@@ -24,12 +24,12 @@ namespace MyClinic.Pages.Treatments
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null || _context.Treatment == null)
+            if (id == null || _context.Treatments == null)
             {
                 return NotFound();
             }
 
-            var treatment = await _context.Treatment.FirstOrDefaultAsync(m => m.TreatmentID == id);
+            var treatment = await _context.Treatments.FirstOrDefaultAsync(m => m.TreatmentID == id);
 
             if (treatment == null)
             {
@@ -44,16 +44,16 @@ namespace MyClinic.Pages.Treatments
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null || _context.Treatment == null)
+            if (id == null || _context.Treatments == null)
             {
                 return NotFound();
             }
-            var treatment = await _context.Treatment.FindAsync(id);
+            var treatment = await _context.Treatments.FindAsync(id);
 
             if (treatment != null)
             {
                 Treatment = treatment;
-                _context.Treatment.Remove(Treatment);
+                _context.Treatments.Remove(Treatment);
                 await _context.SaveChangesAsync();
             }
 

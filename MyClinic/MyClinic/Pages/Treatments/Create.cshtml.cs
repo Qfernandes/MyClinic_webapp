@@ -36,7 +36,7 @@ namespace MyClinic.Pages.Treatments
                 return Page();
             }
 
-            _context.Treatment.Add(Treatment);
+            _context.Treatments.Add(Treatment);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

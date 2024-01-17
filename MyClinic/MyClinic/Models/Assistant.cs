@@ -24,6 +24,6 @@ namespace MyClinic.Models
         [Display(Name = "DOB")]
         public DateTime DOB { get; set; }
 
-        public ICollection<Schedule> Schedules { get; set; }
+        //public ICollection<Schedule> Schedules { get; set; }
     }
 }

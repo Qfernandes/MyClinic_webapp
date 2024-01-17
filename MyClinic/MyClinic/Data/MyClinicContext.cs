@@ -19,13 +19,14 @@ namespace MyClinic.Data
         public DbSet<Treatment> Treatments { get; set; }
         public DbSet<Treatmentpatient> Treatmentpatients { get; set; }
         public DbSet<Assistant> Assistants { get; set; }
-
+        public DbSet<Payment> Payments { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         modelBuilder.Entity<Patient>().ToTable("Patient");
         modelBuilder.Entity<Treatment>().ToTable("Treatment");
         modelBuilder.Entity<Treatmentpatient>().ToTable("Treatmentpatient");
         modelBuilder.Entity<Assistant>().ToTable("Assistant");
+        modelBuilder.Entity<Payment>().ToTable("Payment");
 
 
         }
