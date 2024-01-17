@@ -23,7 +23,7 @@ namespace MyClinic.Pages.Treatments
         }
 
         public string NameSort { get; set; }
-        public string DOBSort { get; set; }
+        public string PriceSort { get; set; }
         public string CurrentFilter { get; set; }
         public string CurrentSort { get; set; }
 
@@ -34,7 +34,7 @@ namespace MyClinic.Pages.Treatments
         {
             CurrentSort = sortOrder;
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            DOBSort = sortOrder == "DOB" ? "dob_desc" : "DOB";
+            PriceSort = sortOrder == "Price" ? "price_desc" : "Price";
             if (searchString != null)
             {
                 pageIndex = 1;
@@ -60,10 +60,15 @@ namespace MyClinic.Pages.Treatments
                 case "name_desc":
                     treatmentsIQ = treatmentsIQ.OrderByDescending(s => s.TreatmentName);
                     break;
+                case "Price":
+                    treatmentsIQ = treatmentsIQ.OrderBy(s => s.Price);
+                    break;
+                case "price_desc":
+                    treatmentsIQ = treatmentsIQ.OrderByDescending(s => s.Price);
+                    break;
                 default:
                     treatmentsIQ = treatmentsIQ.OrderBy(s => s.TreatmentName);
                     break;
-
 
             }
 
