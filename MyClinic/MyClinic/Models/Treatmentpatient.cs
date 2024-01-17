@@ -22,7 +22,7 @@ namespace MyClinic.Models
         // add payment public PaymentStatus? Paymentstatus { get; set; }
 
 
-        // add public Payment Payment { get; set; }
+        public Payment Payment { get; set; }
         
 
         public Patient Patient { get; set; }

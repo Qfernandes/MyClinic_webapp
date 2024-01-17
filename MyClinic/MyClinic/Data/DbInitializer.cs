@@ -210,7 +210,7 @@ namespace MyClinic.Data
                     Patient = carryalex,
                     Service = Service.Crowning,
                     Price = 100,
-                    // add Paymentstatus=Payment.PaymentStatus.Yes
+                    // addPaymentstatus=Payment.PaymentStatus.Yes
 
                 },
                 new Treatmentpatient {
@@ -260,65 +260,65 @@ namespace MyClinic.Data
                     Patient = ninaolli,
                     Service = Service.Crowning,
                     Price = 100,
-                    // add Paymentstatus=Payment.PaymentStatus.Yes
+                    //Paymentstatus=Payment.PaymentStatus.Yes
                 },
             };
             context.AddRange(treatmentpatients);
 
-          /*  if (context.Payments.Any())
+            if (context.Payments.Any())
             {
                 return;
             }
 
-            var Payment1 = new Payment[]
+            var Payment1 = new Payment
             {
                 Patient = carryalex,
                 Service = Service.Crowning,
                 paymentStatus = paymentStatus.no
             };
-            var Payment2 = new Payment[]
+            var Payment2 = new Payment
            {
                 Patient = carryalex,
                 Service = Service.Dental,
                 paymentStatus = paymentStatus.no
            };
-            var Payment3 = new Payment[]
+            var Payment3 = new Payment
            {
                 Patient = aronalonso,
                 Service = Service.Dental,
                 paymentStatus = paymentStatus.no
            };
-            var Payment4 = new Payment[]
+            var Payment4 = new Payment
            {
                 Patient = pearlyanna,
                 Service = Service.Cleaning,
                 paymentStatus = paymentStatus.no
            };
-            var Payment5 = new Payment[]
+            var Payment5 = new Payment
            {
                 Patient = garrybdukas,
                 Service = Service.Braces,
                 paymentStatus = paymentStatus.no
            };
-            var Payment6 = new Payment[]
+            var Payment6 = new Payment
            {
                 Patient = yanimli,
                 Service = Service.Refill,
                 paymentStatus = paymentStatus.no
            };
-            var Payment7 = new Payment[]
+            var Payment7 = new Payment
            {
                 Patient = pasoljustin,
                 Service = Service.Refill,
                 paymentStatus = paymentStatus.no
            };
-            var Payment8 = new Payment[]
+            var Payment8 = new Payment
            {
                 Patient = laurannormani,
                 Service = Service.Braces,
                 paymentStatus = paymentStatus.no
            };
-            var Payment9 = new Payment[]
+            var Payment9 = new Payment
            {
                 Patient = ninaolli,
                 Service = Service.Crowning,
@@ -337,7 +337,7 @@ namespace MyClinic.Data
                 Payment9
             };
 
-            context.AddRange(Payments);*/
+            context.AddRange(Payments);
 
             /* var schedules = new Schedule[]
              {
