@@ -16,15 +16,20 @@ namespace MyClinic.Data
         }
 
         public DbSet<Patient> Patients { get; set; }
-
         public DbSet<Treatment> Treatments { get; set; }
+        public DbSet<Treatmentpatient> Treatmentpatients { get; set; }
+        public DbSet<Assistant> Assistants { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         modelBuilder.Entity<Patient>().ToTable("Patient");
         modelBuilder.Entity<Treatment>().ToTable("Treatment");
+        modelBuilder.Entity<Treatmentpatient>().ToTable("Treatmentpatient");
+        modelBuilder.Entity<Assistant>().ToTable("Assistant");
+
+
         }
 
-        public DbSet<MyClinic.Models.Treatment> Treatment { get; set; } = default!;
+        //public DbSet<MyClinic.Models.Treatment> Treatment { get; set; } = default!;
     }
 }
