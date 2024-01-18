@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ravle\\OneDrive\\Desktop\\Final version Clinic\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj": {}
+    "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ravle\\OneDrive\\Desktop\\Final version Clinic\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj": {
+    "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ravle\\OneDrive\\Desktop\\Final version Clinic\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
+        "projectUniqueName": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
         "projectName": "MyClinic",
-        "projectPath": "C:\\Users\\ravle\\OneDrive\\Desktop\\Final version Clinic\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
-        "packagesPath": "C:\\Users\\ravle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ravle\\OneDrive\\Desktop\\Final version Clinic\\MyClinic_webapp\\MyClinic\\MyClinic\\obj\\",
+        "projectPath": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
+        "packagesPath": "C:\\Users\\jozic\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ravle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jozic\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,17 +54,17 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.23, )"
+              "version": "[6.0.26, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[6.0.23, )"
+              "version": "[6.0.26, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.23, )"
+              "version": "[6.0.26, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
