@@ -12,7 +12,7 @@ using MyClinic.Data;
 namespace MyClinic.Migrations
 {
     [DbContext(typeof(MyClinicContext))]
-    [Migration("20240118074204_r")]
+    [Migration("20240118093346_r")]
     partial class r
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -169,7 +169,10 @@ namespace MyClinic.Migrations
             modelBuilder.Entity("MyClinic.Models.Treatment", b =>
                 {
                     b.Property<int>("TreatmentID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TreatmentID"), 1L, 1);
 
                     b.Property<int>("Price")
                         .HasColumnType("int");

@@ -48,7 +48,8 @@ namespace MyClinic.Migrations
                 name: "Treatment",
                 columns: table => new
                 {
-                    TreatmentID = table.Column<int>(type: "int", nullable: false),
+                    TreatmentID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     TreatmentName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<int>(type: "int", nullable: false)
                 },

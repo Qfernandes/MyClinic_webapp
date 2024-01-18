@@ -163,35 +163,35 @@ namespace MyClinic.Data
             
             var Crowning = new Treatment
             {
-                TreatmentID = 1050,
+                //TreatmentID = 1050,
                 TreatmentName = "Crowning",
                 Price = 100
             };
 
             var Braces = new Treatment
             {
-                TreatmentID = 4022,
+                //TreatmentID = 4022,
                 TreatmentName = "Braces",
                 Price = 115
             };
 
             var Cleaning = new Treatment
             {
-                TreatmentID = 4041,
+                //TreatmentID = 4041,
                 TreatmentName = "Cleaning",
                 Price = 75
             };
 
             var Dental = new Treatment
             {
-                TreatmentID = 1045,
+                //TreatmentID = 1045,
                 TreatmentName = "Dental",
                 Price = 150
             };
 
             var Refill = new Treatment
             {
-                TreatmentID = 3141,
+                //TreatmentID = 3141,
                 TreatmentName = "Refill",
                 Price = 70
             };

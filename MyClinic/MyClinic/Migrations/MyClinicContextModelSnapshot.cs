@@ -167,7 +167,10 @@ namespace MyClinic.Migrations
             modelBuilder.Entity("MyClinic.Models.Treatment", b =>
                 {
                     b.Property<int>("TreatmentID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TreatmentID"), 1L, 1);
 
                     b.Property<int>("Price")
                         .HasColumnType("int");
