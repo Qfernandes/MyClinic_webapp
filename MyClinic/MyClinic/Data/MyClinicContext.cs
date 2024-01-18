@@ -20,6 +20,8 @@ namespace MyClinic.Data
         public DbSet<Treatmentpatient> Treatmentpatients { get; set; }
         public DbSet<Assistant> Assistants { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Schedule> Schedules { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
         modelBuilder.Entity<Patient>().ToTable("Patient");
@@ -27,6 +29,7 @@ namespace MyClinic.Data
         modelBuilder.Entity<Treatmentpatient>().ToTable("Treatmentpatient");
         modelBuilder.Entity<Assistant>().ToTable("Assistant");
         modelBuilder.Entity<Payment>().ToTable("Payment");
+        modelBuilder.Entity<Schedule>().ToTable("Schedule");
 
 
         }
