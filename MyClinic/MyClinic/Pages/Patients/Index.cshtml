@@ -1,0 +1,118 @@
+﻿@page
+@model MyClinic.Pages.Patients.IndexModel
+
+@{
+    ViewData["Title"] = "Patients";
+}
+
+<h2>Patients</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Patients[0].FullName)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DOBSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Patients[0].DOB)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patients[0].Gender)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patients[0].ContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patients[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patients[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patients[0].NextOfKin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patients[0].MedicalHistory)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Patients)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DOB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NextOfKin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MedicalHistory)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.PatientID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.PatientID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.PatientID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Patients.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Patients.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Patients.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Patients.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>
