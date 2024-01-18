@@ -155,44 +155,43 @@ namespace MyClinic.Data
 
             context.AddRange(assistants);
 
-            /*
-            if (contextt.Treatments.Any())
+            
+            if (context.Treatments.Any())
             {
                 return;
             }
-            */
-
+            
             var Crowning = new Treatment
             {
-                //TreatmentID = 1050,
+                TreatmentID = 1050,
                 TreatmentName = "Crowning",
                 Price = 100
             };
 
             var Braces = new Treatment
             {
-                //TreatmentID = 4022,
+                TreatmentID = 4022,
                 TreatmentName = "Braces",
                 Price = 115
             };
 
             var Cleaning = new Treatment
             {
-                //TreatmentID = 4041,
+                TreatmentID = 4041,
                 TreatmentName = "Cleaning",
                 Price = 75
             };
 
             var Dental = new Treatment
             {
-                //TreatmentID = 1045,
+                TreatmentID = 1045,
                 TreatmentName = "Dental",
                 Price = 150
             };
 
             var Refill = new Treatment
             {
-                //TreatmentID = 3141,
+                TreatmentID = 3141,
                 TreatmentName = "Refill",
                 Price = 70
             };
@@ -203,6 +202,7 @@ namespace MyClinic.Data
             };
 
             context.AddRange(Treatments);
+            
 
             var treatmentpatients = new Treatmentpatient[]
             {
@@ -210,57 +210,57 @@ namespace MyClinic.Data
                     Patient = carryalex,
                     Service = Service.Crowning,
                     Price = 100,
-                    // addPaymentstatus=Payment.PaymentStatus.Yes
+                    Paymentstatus=paymentStatus.yes
 
                 },
                 new Treatmentpatient {
                     Patient = carryalex,
                     Service = Service.Dental,
                     Price = 150,
-                    // add Paymentstatus=Payment.PaymentStatus.No
+                    Paymentstatus=paymentStatus.no
 
                 },
                 new Treatmentpatient {
                     Patient = aronalonso,
                     Service = Service.Dental,
                     Price = 150,
-                    // add Paymentstatus=Payment.PaymentStatus.Yes
+                    Paymentstatus=paymentStatus.yes
                 },
                 new Treatmentpatient {
                     Patient = pearlyanna,
                     Service = Service.Cleaning,
                     Price = 75,
-                    //addPaymentstatus=Payment.PaymentStatus.Yes
+                    Paymentstatus=paymentStatus.yes
                 },
                 new Treatmentpatient {
                     Patient = garrybdukas,
                     Service = Service.Braces,
                     Price = 115,
-                    // add Paymentstatus=Payment.PaymentStatus.Yes
+                    Paymentstatus=paymentStatus.yes
                 },
                 new Treatmentpatient {
                     Patient = yanimli,
                     Service = Service.Refill,
                     Price = 70,
-                    // add Paymentstatus=Payment.PaymentStatus.Yes
+                    Paymentstatus=paymentStatus.yes
                 },
                 new Treatmentpatient {
                     Patient = pasoljustin,
                     Service = Service.Refill,
                     Price = 70,
-                    // add Paymentstatus=Payment.PaymentStatus.Yes
+                    Paymentstatus=paymentStatus.yes
                 },
                 new Treatmentpatient {
                     Patient = laurannormani,
                     Service = Service.Braces,
                     Price = 115,
-                    // add Paymentstatus=Payment.PaymentStatus.Yes
+                    Paymentstatus=paymentStatus.yes
                 },
                 new Treatmentpatient {
                     Patient = ninaolli,
                     Service = Service.Crowning,
                     Price = 100,
-                    //Paymentstatus=Payment.PaymentStatus.Yes
+                    Paymentstatus=paymentStatus.no
                 },
             };
             context.AddRange(treatmentpatients);
@@ -338,23 +338,111 @@ namespace MyClinic.Data
             };
 
             context.AddRange(Payments);
-
-            /* var schedules = new Schedule[]
-             {
+            var schedules = new Schedule[]
+                        {
                  new Schedule {
                      DateTime = DateTime.Parse("2023-08-01"),
                      Service = Service.Crowning,
                      Patient = carryalex,
                      Assistant = cox,
-                     Paymentstatus=Payment.PaymentStatus.Yes
+                     Paymentstatus=paymentStatus.yes
 
 
-                 },*/
+                },
+
+                 new Schedule {
+                     DateTime = DateTime.Parse("2023-10-01"),
+                     Service = Service.Dental,
+                     Patient = carryalex,
+                     Assistant = helen,
+                     Paymentstatus=paymentStatus.no
+
+
+                 },
+                 new Schedule {
+                     DateTime = DateTime.Parse("2023-09-09"),
+                     Service = Service.Crowning,
+                     Patient = carryalex,
+                     Assistant = cox,
+                    Paymentstatus=paymentStatus.yes
+
+
+
+                 },
+                 new Schedule {
+                     DateTime = DateTime.Parse("2024-01-01"),
+                     Service = Service.Dental,
+                     Patient = aronalonso,
+                     Assistant = helen,
+                     Paymentstatus=paymentStatus.no
+
+
+
+                 },
+
+                 new Schedule {
+                     DateTime = DateTime.Parse("2024-02-02"),
+                     Service = Service.Cleaning,
+                     Patient = pearlyanna,
+                     Assistant = cox,
+                     Paymentstatus=paymentStatus.yes
+
+
+
+                 },
+                 new Schedule {
+                     DateTime = DateTime.Parse("2023-06-06"),
+                     Service = Service.Braces,
+                     Patient = garrybdukas,
+                     Assistant = helen,
+                     Paymentstatus=paymentStatus.no
+
+
+
+                 },
+
+                 new Schedule {
+                     DateTime = DateTime.Parse("2023-06-09"),
+                     Service = Service.Refill,
+                     Patient = yanimli,
+                     Assistant = cox,
+                     Paymentstatus=paymentStatus.yes
+
+
+
+                 },
+
+                 new Schedule {
+                     DateTime = DateTime.Parse("2023-09-01"),
+                     Service = Service.Refill,
+                     Patient = pasoljustin,
+                     Assistant = cox,
+                     Paymentstatus=paymentStatus.yes
+
+
+
+                 },
+                  new Schedule {
+                     DateTime = DateTime.Parse("2024-01-02"),
+                     Service = Service.Braces,
+                     Patient = laurannormani,
+                     Assistant = helen,
+                     Paymentstatus=paymentStatus.yes
+
+
+
+                 },
+                new Schedule {
+                     DateTime = DateTime.Parse("2023-09-10"),
+                     Service = Service.Crowning,
+                     Patient = ninaolli,
+                     Assistant = cox,
+                     Paymentstatus=paymentStatus.yes
+                }
+
+            };
+            context.AddRange(schedules);
+            context.SaveChanges();
         }
-     }
- }
-
-
-//8 schedules
-// 8 payments
-//context.SaveChanges();
+    }
+}
