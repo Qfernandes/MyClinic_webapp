@@ -19,7 +19,7 @@ namespace MyClinic.Models
 
         [DisplayFormat(NullDisplayText = "No status")]
 
-        // add payment public PaymentStatus? Paymentstatus { get; set; }
+        public paymentStatus? Paymentstatus { get; set; }
 
 
         public Payment Payment { get; set; }
@@ -28,7 +28,6 @@ namespace MyClinic.Models
         public Patient Patient { get; set; }
 
         //public ICollection<Schedule> Schedules { get; set; }
-        //public ICollection<Payment> Payments { get; set; }
         //public Treatment Treatment { get; set; }
         //public int TreatmentID { get; set; }
 
