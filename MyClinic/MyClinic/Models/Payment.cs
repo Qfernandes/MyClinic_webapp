@@ -18,10 +18,8 @@ namespace MyClinic.Models
         public paymentStatus? paymentStatus { get; set; }
         public Service? Service { get; set; }
 
-
-
         public Patient Patient { get; set; }
-        public ICollection<Treatment> Treatments { get; set; }
+        //add public ICollection<Treatment> Treatments { get; set; }
         public ICollection<Treatmentpatient> Treatmentpatients { get; set; }
 
 
