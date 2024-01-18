@@ -1,0 +1,101 @@
+﻿@page
+@model MyClinic.Pages.Schedules.IndexModel
+
+@{
+    ViewData["Title"] = "Schedules";
+}
+
+<h2>Schedules</h2>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-primary" /> |
+            <a asp-page="./Index">Back to full List</a>
+        </p>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateTimeSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Schedules[0].DateTime)
+                </a>
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Schedules[0].Service)
+                </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedules[0].Assistant.FirstMidName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedules[0].Patient.FullName)
+            </th>
+            <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                   asp-route-currentFilter="@Model.CurrentFilter">
+                    @Html.DisplayNameFor(model => model.Schedules[0].Paymentstatus)
+                </a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Schedules)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Service)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Assistant.FirstMidName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Patient.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Paymentstatus)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ScheduleID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ScheduleID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ScheduleID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.Schedules.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.Schedules.HasNextPage ? "disabled" : "";
+}
+
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Schedules.PageIndex - 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @prevDisabled">
+    Previous
+</a>
+<a asp-page="./Index"
+   asp-route-sortOrder="@Model.CurrentSort"
+   asp-route-pageIndex="@(Model.Schedules.PageIndex + 1)"
+   asp-route-currentFilter="@Model.CurrentFilter"
+   class="btn btn-primary @nextDisabled">
+    Next
+</a>
