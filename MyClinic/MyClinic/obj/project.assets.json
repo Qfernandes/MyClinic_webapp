@@ -663,10 +663,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.21": {
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.21"
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {
@@ -4930,10 +4930,10 @@
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.21": {
-      "sha512": "YpALB73Q1CK6ZXAbCOigTOtnQG5j5yazh5j02Ns/VvvxAu03nf5ojfqmA/QGH0jYZ9Q0OE9QN0pfdwSHSp50Pw==",
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/6.0.0": {
+      "sha512": "1mnjZaEH9LWfbuCfYYil64TZ6G/hnODd+WKBjEbQx5/SPjypj+2LzQ43M09JXWyRvPpjiefl/wxV0q/ACqZLRw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/6.0.21",
+      "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4941,7 +4941,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net6.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll",
         "lib/net6.0/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.xml",
-        "microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.21.nupkg.sha512",
+        "microsoft.aspnetcore.diagnostics.entityframeworkcore.6.0.0.nupkg.sha512",
         "microsoft.aspnetcore.diagnostics.entityframeworkcore.nuspec"
       ]
     },
@@ -11485,7 +11485,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.21",
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 6.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.21",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.21",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.23",
@@ -11495,24 +11495,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rande\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\jozic\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rande\\OneDrive\\Desktop\\Randeep2\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
+      "projectUniqueName": "C:\\Users\\jozic\\Downloads\\quincy\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
       "projectName": "MyClinic",
-      "projectPath": "C:\\Users\\rande\\OneDrive\\Desktop\\Randeep2\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
-      "packagesPath": "C:\\Users\\rande\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rande\\OneDrive\\Desktop\\Randeep2\\MyClinic_webapp\\MyClinic\\MyClinic\\obj\\",
+      "projectPath": "C:\\Users\\jozic\\Downloads\\quincy\\MyClinic_webapp\\MyClinic\\MyClinic\\MyClinic.csproj",
+      "packagesPath": "C:\\Users\\jozic\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jozic\\Downloads\\quincy\\MyClinic_webapp\\MyClinic\\MyClinic\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\rande\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\jozic\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11520,7 +11515,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -11541,7 +11535,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
-            "version": "[6.0.21, )"
+            "version": "[6.0.0, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
@@ -11589,7 +11583,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
