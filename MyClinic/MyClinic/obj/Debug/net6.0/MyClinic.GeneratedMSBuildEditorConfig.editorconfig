@@ -9,65 +9,105 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyClinic
 build_property.RootNamespace = MyClinic
-build_property.ProjectDir = C:\Users\rande\OneDrive\Desktop\Randeep2\MyClinic_webapp\MyClinic\MyClinic\
+build_property.ProjectDir = C:\Users\jozic\Downloads\quincy\MyClinic_webapp\MyClinic\MyClinic\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\rande\OneDrive\Desktop\Randeep2\MyClinic_webapp\MyClinic\MyClinic
+build_property.MSBuildProjectDirectory = C:\Users\jozic\Downloads\quincy\MyClinic_webapp\MyClinic\MyClinic
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Error.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Index.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Privacy.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Patients/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Patients/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Patients/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Patients/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Patients/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGF0aWVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Shared/_LoginPartial.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Schedules/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2NoZWR1bGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Schedules/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2NoZWR1bGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Schedules/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2NoZWR1bGVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Schedules/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2NoZWR1bGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Schedules/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2NoZWR1bGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Create.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJlYXRtZW50c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Delete.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJlYXRtZW50c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Details.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJlYXRtZW50c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Edit.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJlYXRtZW50c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Index.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Treatments/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJlYXRtZW50c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/_ViewImports.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/_ViewStart.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rande/OneDrive/Desktop/Randeep2/MyClinic_webapp/MyClinic/MyClinic/Pages/Shared/_Layout.cshtml]
+[C:/Users/jozic/Downloads/quincy/MyClinic_webapp/MyClinic/MyClinic/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-29wx1djxni
