@@ -12,7 +12,7 @@ using MyClinic.Data;
 namespace MyClinic.Migrations
 {
     [DbContext(typeof(MyClinicContext))]
-    [Migration("20240117114434_r")]
+    [Migration("20240118074204_r")]
     partial class r
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -65,12 +65,15 @@ namespace MyClinic.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ContactNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<DateTime>("DOB")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullName")
@@ -108,6 +111,9 @@ namespace MyClinic.Migrations
                     b.Property<int?>("PatientID")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Service")
+                        .HasColumnType("int");
+
                     b.Property<int?>("paymentStatus")
                         .HasColumnType("int");
 
@@ -118,12 +124,51 @@ namespace MyClinic.Migrations
                     b.ToTable("Payment", (string)null);
                 });
 
-            modelBuilder.Entity("MyClinic.Models.Treatment", b =>
+            modelBuilder.Entity("MyClinic.Models.Schedule", b =>
                 {
-                    b.Property<int>("TreatmentID")
+                    b.Property<int>("ScheduleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ScheduleID"), 1L, 1);
+
+                    b.Property<int?>("AssistantID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("PatientID")
                         .HasColumnType("int");
 
                     b.Property<int?>("PaymentID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Paymentstatus")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Service")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TreatmentpatientID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ScheduleID");
+
+                    b.HasIndex("AssistantID");
+
+                    b.HasIndex("PatientID");
+
+                    b.HasIndex("PaymentID");
+
+                    b.HasIndex("TreatmentpatientID");
+
+                    b.ToTable("Schedule", (string)null);
+                });
+
+            modelBuilder.Entity("MyClinic.Models.Treatment", b =>
+                {
+                    b.Property<int>("TreatmentID")
                         .HasColumnType("int");
 
                     b.Property<int>("Price")
@@ -133,8 +178,6 @@ namespace MyClinic.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("TreatmentID");
-
-                    b.HasIndex("PaymentID");
 
                     b.ToTable("Treatment", (string)null);
                 });
@@ -150,6 +193,12 @@ namespace MyClinic.Migrations
                     b.Property<int?>("PatientID")
                         .HasColumnType("int");
 
+                    b.Property<int?>("PaymentID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Paymentstatus")
+                        .HasColumnType("int");
+
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
@@ -159,6 +208,8 @@ namespace MyClinic.Migrations
                     b.HasKey("TreatmentpatientID");
 
                     b.HasIndex("PatientID");
+
+                    b.HasIndex("PaymentID");
 
                     b.ToTable("Treatmentpatient", (string)null);
                 });
@@ -172,11 +223,31 @@ namespace MyClinic.Migrations
                     b.Navigation("Patient");
                 });
 
-            modelBuilder.Entity("MyClinic.Models.Treatment", b =>
+            modelBuilder.Entity("MyClinic.Models.Schedule", b =>
                 {
-                    b.HasOne("MyClinic.Models.Payment", null)
-                        .WithMany("Treatments")
+                    b.HasOne("MyClinic.Models.Assistant", "Assistant")
+                        .WithMany()
+                        .HasForeignKey("AssistantID");
+
+                    b.HasOne("MyClinic.Models.Patient", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientID");
+
+                    b.HasOne("MyClinic.Models.Payment", "Payment")
+                        .WithMany()
                         .HasForeignKey("PaymentID");
+
+                    b.HasOne("MyClinic.Models.Treatmentpatient", "Treatmentpatient")
+                        .WithMany()
+                        .HasForeignKey("TreatmentpatientID");
+
+                    b.Navigation("Assistant");
+
+                    b.Navigation("Patient");
+
+                    b.Navigation("Payment");
+
+                    b.Navigation("Treatmentpatient");
                 });
 
             modelBuilder.Entity("MyClinic.Models.Treatmentpatient", b =>
@@ -185,7 +256,13 @@ namespace MyClinic.Migrations
                         .WithMany("Treatmentpatients")
                         .HasForeignKey("PatientID");
 
+                    b.HasOne("MyClinic.Models.Payment", "Payment")
+                        .WithMany("Treatmentpatients")
+                        .HasForeignKey("PaymentID");
+
                     b.Navigation("Patient");
+
+                    b.Navigation("Payment");
                 });
 
             modelBuilder.Entity("MyClinic.Models.Patient", b =>
@@ -197,7 +274,7 @@ namespace MyClinic.Migrations
 
             modelBuilder.Entity("MyClinic.Models.Payment", b =>
                 {
-                    b.Navigation("Treatments");
+                    b.Navigation("Treatmentpatients");
                 });
 #pragma warning restore 612, 618
         }
