@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\MyClinic.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\wwwroot\\Images\\bg.jpg",
+      "PackagePath": "staticwebassets\\Images\\bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\wwwroot\\Images\\bg2.png",
+      "PackagePath": "staticwebassets\\Images\\bg2.png"
+    },
+    {
+      "Id": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\wwwroot\\Images\\toothlogo.jpg",
+      "PackagePath": "staticwebassets\\Images\\toothlogo.jpg"
+    },
+    {
       "Id": "C:\\Users\\jozic\\OneDrive\\Documents\\GitHub\\MyClinic_webapp\\MyClinic\\MyClinic\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
